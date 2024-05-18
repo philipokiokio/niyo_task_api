@@ -13,8 +13,7 @@ venv :
 	
 get-permission :
 	chmod +x makefile	
-activate :
-	. ./venv/bin/activate
+
 install :
 	pip install -r requirements.txt 
 
@@ -36,8 +35,6 @@ local-migrate-down:
 
 local-head:
 	alembic -c local_dev_alembic.ini heads
-
-
 
 run-server:
 	uvicorn task.root.app:app --reload --port=8000

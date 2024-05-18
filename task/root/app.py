@@ -29,7 +29,6 @@ def root():
 async def websocket_endpoint(websocket: WebSocket, access_token: str):
     try:
         token_data = await verify_access_token(token=access_token)
-        print(token_data)
 
         await manager.connect(websocket=websocket, user_uid=token_data.user_uid)
         try:
