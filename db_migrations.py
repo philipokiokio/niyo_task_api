@@ -1,4 +1,4 @@
-from project_name.root import app
-from project_name.root.database import create_migration
+from task.root import app
+from task.root.database import create_migration
 
 create_migration()
